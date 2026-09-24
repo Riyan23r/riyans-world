@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Riyan's World Feedback</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        background: #f2f2f2;
+    }
+
+    .container {
+        max-width: 500px;
+        margin: auto;
+        background: white;
+        padding: 25px;
+        border-radius: 18px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .subtitle {
+        text-align: center;
+        color: #666;
+        margin-bottom: 25px;
+    }
+
+    label.question {
+        display: block;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom: 8px;
+    }
+
+    input[type="text"],
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 9px;
+        font-size: 16px;
+    }
+
+    textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    .option {
+        margin: 10px 0;
+    }
+
+    .option label {
+        font-weight: normal;
+        cursor: pointer;
+    }
+
+    .stars {
+        display: flex;
+        gap: 5px;
+        margin-top: 5px;
+    }
+
+    .stars input {
+        display: none;
+    }
+
+    .stars label {
+        font-size: 38px;
+        color: #ccc;
+        cursor: pointer;
+    }
+
+    .stars label:hover,
+    .stars label:has(~ input:checked),
+    .stars input:checked + label {
+        color: #ffc107;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 25px;
+        padding: 14px;
+        border: none;
+        border-radius: 10px;
+        background: #ff0000;
+        color: white;
+        font-size: 17px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #cc0000;
+    }
+
+    #status {
+        text-align: center;
+        margin-top: 15px;
+        font-weight: bold;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📺 Riyan's World</h1>
+    <div class="subtitle">YouTube Feedback</div>
+
+    <!--
+        This invisible iframe prevents the Google Form
+        from opening when the form is submitted.
+    -->
+    <iframe name="hiddenFrame" style="display:none;"></iframe>
+
+    <form
+        id="feedbackForm"
+        action="https://docs.google.com/forms/d/e/1FAIpQLSfdaZ8klXN-9tlMwBFXc7mLZneRkQluj-xOmFrcuB1z-6BzoA/formResponse"
+        method="POST"
+        target="hiddenFrame"
+    >
+
+        <!-- NAME -->
+        <label class="question">Your name</label>
+
+        <input
+            type="text"
+            name="entry.1330029626"
+            placeholder="Enter your name"
+            required
+        >
+
+
+        <!-- SUBSCRIBED -->
+        <label class="question">Are you subscribed?</label>
+
+        <div class="option">
+            <label>
+                <input
+                    type="radio"
+                    name="entry.1165605090"
+                    value="Yes"
+                    required
+                >
+                Yes
+            </label>
+        </div>
+
+        <div class="option">
+            <label>
+                <input
+                    type="radio"
+                    name="entry.1165605090"
+                    value="No"
+                >
+                No
+            </label>
+        </div>
+
+
+        <!-- YOUTUBE CHANNEL -->
+        <label class="question">Do you have a YouTube channel?</label>
+
+        <div class="option">
+            <label>
+                <input
+                    type="radio"
+                    name="entry.204047896"
+                    value="Yes"
+                    required
+                >
+                Yes
+            </label>
+        </div>
+
+        <div class="option">
+            <label>
+                <input
+                    type="radio"
+                    name="entry.204047896"
+                    value="No"
+                >
+                No
+            </label>
+        </div>
+
+
+        <!-- RATING -->
+        <label class="question">How would you rate Riyan's World?</label>
+
+        <div class="stars">
+
+            <input
+                type="radio"
+                id="star1"
+                name="entry.652177100"
+                value="1"
+                required
+            >
+            <label for="star1">★</label>
+
+            <input
+                type="radio"
+                id="star2"
+                name="entry.652177100"
+                value="2"
+            >
+            <label for="star2">★</label>
+
+            <input
+                type="radio"
+                id="star3"
+                name="entry.652177100"
+                value="3"
+            >
+            <label for="star3">★</label>
+
+            <input
+                type="radio"
+                id="star4"
+                name="entry.652177100"
+                value="4"
+            >
+            <label for="star4">★</label>
+
+            <input
+                type="radio"
+                id="star5"
+                name="entry.652177100"
+                value="5"
+            >
+            <label for="star5">★</label>
+
+        </div>
+
+
+        <!-- LIKE CHANNEL -->
+        <label class="question">Do you like my channel?</label>
+
+        <div class="option">
+            <label>
+                <input
+                    type="radio"
+                    name="entry.661417060"
+                    value="Yes"
+                    required
+                >
+                Yes ❤️
+            </label>
+        </div>
+
+        <div class="option">
+            <label>
+                <input
+                    type="radio"
+                    name="entry.661417060"
+                    value="No"
+                >
+                No
+            </label>
+        </div>
+
+
+        <!-- FEEDBACK -->
+        <label class="question">Feedback</label>
+
+        <textarea
+            name="entry.376483611"
+            placeholder="Tell me what you think about my channel..."
+            required
+        ></textarea>
+
+
+        <button type="submit">
+            Submit Feedback 🚀
+        </button>
+
+    </form>
+
+    <p id="status"></p>
+
+</div>
+
+
+<script>
+
+const form = document.getElementById("feedbackForm");
+const status = document.getElementById("status");
+
+form.addEventListener("submit", function() {
+
+    status.textContent = "Sending... 📤";
+
+    setTimeout(function() {
+
+        status.textContent =
+            "✅ Thanks for your feedback!";
+
+        form.reset();
+
+    }, 1000);
+
+});
+
+</script>
+
+</body>
+</html>
